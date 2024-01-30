@@ -19,7 +19,11 @@ class ToDoList extends StatelessWidget {
         padding: EdgeInsets.all(20),
         child: Row(
           children: [
-            Checkbox(value: taskValue, onChanged: onChanged),
+            Checkbox(
+              value: taskValue,
+              onChanged: onChanged,
+              activeColor: Colors.black,
+            ),
             Text(
               taskName,
               style: TextStyle(
