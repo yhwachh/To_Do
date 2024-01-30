@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)"
+options: "ab2c3f33d87af1f16bc7d11473c51bbd262c677310c7a3e59b3de19e74b2f213"
+build_start_time: [1706651461, 832878000]
+build_end_time: [1706651461, 934382000]
+inputs:
+  "/Users/ibraguimalbakov/code/dev/To_Do/macos/Flutter/GeneratedPluginRegistrant.swift": !private [1706651428, 427236460]
+  "/Users/ibraguimalbakov/code/dev/To_Do/macos/Runner/AppDelegate.swift": !private [1706614153, 759607544]
+  "/Users/ibraguimalbakov/code/dev/To_Do/macos/Runner/MainFlutterWindow.swift": !private [1706614153, 762571425]

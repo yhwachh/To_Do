@@ -17,6 +17,8 @@ class ToDoList extends StatelessWidget {
       padding: const EdgeInsets.only(left: 30.0, right: 30, top: 20),
       child: Container(
         padding: EdgeInsets.all(20),
+        decoration: BoxDecoration(
+            color: Colors.yellow, borderRadius: BorderRadius.circular(10)),
         child: Row(
           children: [
             Checkbox(
@@ -31,8 +33,6 @@ class ToDoList extends StatelessWidget {
             ),
           ],
         ),
-        decoration: BoxDecoration(
-            color: Colors.yellow, borderRadius: BorderRadius.circular(10)),
       ),
     );
   }

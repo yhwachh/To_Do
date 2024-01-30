@@ -21,6 +21,25 @@ class _MyHomePageState extends State<MyHomePage> {
     super.dispose();
   }
 
+  void saveNewTask() {
+    setState(() {
+      toDoList.add([taskController.text, false]);
+      taskController.clear();
+      Navigator.of(context).pop();
+    });
+  }
+
+  void creatNewTask() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return DialogBox(
+            controller: taskController,
+            onSave: saveNewTask,
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           elevation: 0,
         ),
         floatingActionButton: FloatingActionButton(
-            onPressed:() {AlertD}, child: const Icon(Icons.add)),
+            onPressed: creatNewTask, child: const Icon(Icons.add)),
         body: ListView.builder(
             itemCount: toDoList.length,
             itemBuilder: (context, index) {
@@ -46,37 +65,3 @@ class _MyHomePageState extends State<MyHomePage> {
             }));
   }
 }
-   /*   floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {
-          showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return SimpleDialog(children: [
-                  Text("Ajouter une tâche"),
-                  TextField(
-                    controller: taskController, // Utilisez le contrôleur ici
-                    decoration: InputDecoration(
-                        hintText: "Entrez le nom de la tâche ici"),
-                  ),
-                  ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          toDoList.add([
-                            taskController.text,
-                            false
-                          ]); // Utilisez la valeur du contrôleur ici
-                          taskController
-                              .clear(); // Effacez le texte du contrôleur
-                        });
-                        Navigator.of(context).pop();
-                      },
-                      child: Text("data"))
-                ]);
-              });
-        },
-      ),
-    );
-  }
-}
-*/
